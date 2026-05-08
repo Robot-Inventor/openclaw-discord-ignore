@@ -1,0 +1,21 @@
+name: Build
+
+on:
+    push:
+        branches: [main]
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+
+        steps:
+            - uses: actions/checkout@v5
+            - uses: oven-sh/setup-bun@v2
+
+            - run: bun install --frozen-lockfile
+            - run: bun run build

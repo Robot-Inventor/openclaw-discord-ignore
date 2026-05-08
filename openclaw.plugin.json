@@ -1,0 +1,48 @@
+{
+    "id": "discord-ignore",
+    "name": "Discord Ignore",
+    "description": "Rule-based Discord message filtering and /cooldown slash command support for OpenClaw.",
+    "activation": {
+        "onStartup": true
+    },
+    "configSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "defaultCooldownMinutes": {
+                "type": "number",
+                "default": 30,
+                "exclusiveMinimum": 0
+            },
+            "ignoredAccountIds": {
+                "type": "array",
+                "default": [],
+                "items": {
+                    "type": "string"
+                }
+            },
+            "ignoredLeadingStrings": {
+                "type": "array",
+                "default": [],
+                "items": {
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        }
+    },
+    "uiHints": {
+        "defaultCooldownMinutes": {
+            "label": "Default cooldown minutes",
+            "help": "Default cooldown duration used by /cooldown and /cooldown on."
+        },
+        "ignoredAccountIds": {
+            "label": "Ignored account IDs",
+            "help": "Discord account IDs whose inbound messages should be ignored before agent dispatch."
+        },
+        "ignoredLeadingStrings": {
+            "label": "Ignored leading strings",
+            "help": "Message prefixes that should be ignored after Discord mentions are stripped."
+        }
+    }
+}
