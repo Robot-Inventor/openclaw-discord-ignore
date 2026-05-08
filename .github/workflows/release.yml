@@ -21,6 +21,13 @@ jobs:
 
             - run: bun install --frozen-lockfile
 
+            - name: Authenticate
+              env:
+                  CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+                  CLAWHUB_CONFIG_PATH: ${{ runner.temp }}/clawhub-config.json
+              run: |
+                  clawhub login --token "$CLAWHUB_TOKEN" --no-browser
+
             - name: Create Release Pull Request or Publish to npm
               id: changesets
               uses: changesets/action@v1
