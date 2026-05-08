@@ -33,7 +33,6 @@ jobs:
             - name: Authenticate
               env:
                   CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
-                  CLAWHUB_CONFIG_PATH: ${{ runner.temp }}/clawhub-config.json
               run: |
                   bunx clawhub login --token "$CLAWHUB_TOKEN" --no-browser
 
