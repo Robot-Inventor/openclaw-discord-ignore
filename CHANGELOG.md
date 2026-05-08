@@ -1,5 +1,11 @@
 # @robot-inventor/discord-ignore
 
+## 0.1.2
+
+### Patch Changes
+
+- [#13](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/13) [`5c8996d`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/5c8996d6ae232f5e43ae7c9534ef13029815a7e6) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - ci: remove the path specification for the ClawHub config file
+
 ## 0.1.1
 
 ### Patch Changes
