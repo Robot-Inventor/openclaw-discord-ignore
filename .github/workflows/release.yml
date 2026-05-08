@@ -35,7 +35,7 @@ jobs:
                   CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
                   CLAWHUB_CONFIG_PATH: ${{ runner.temp }}/clawhub-config.json
               run: |
-                  clawhub login --token "$CLAWHUB_TOKEN" --no-browser
+                  bunx clawhub login --token "$CLAWHUB_TOKEN" --no-browser
 
             - name: Create Release Pull Request or Publish to npm
               id: changesets
