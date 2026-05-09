@@ -1,5 +1,11 @@
 # @robot-inventor/discord-ignore
 
+## 1.0.1
+
+### Patch Changes
+
+- [#22](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/22) [`a596325`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/a59632520d9f7b3d27feddf4f1485bb306ae7652) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: improve the description of `/cooldown` slash command
+
 ## 1.0.0
 
 ### Major Changes
