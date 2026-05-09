@@ -165,7 +165,7 @@ export default definePluginEntry({
         api.registerCommand({
             acceptsArgs: true,
             channels: ["discord"],
-            description: "Enable or disable cooldown for this channel.",
+            description: "Enable or disable cooldown for this channel. Optional arg: on, off, or minutes.",
             handler: (context) => handleCooldownCommand(context, defaultCooldownMinutes),
             name: "cooldown",
             requireAuth: true
