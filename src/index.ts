@@ -1,14 +1,29 @@
 import { type PluginCommandContext, definePluginEntry } from "openclaw/plugin-sdk/plugin-entry";
 
 const DEFAULT_COOLDOWN_MINUTES = 30;
+const DEFAULT_AUTO_COOLDOWN_REQUEST_COUNT = 10;
+const DEFAULT_AUTO_COOLDOWN_WITHIN_MINUTES = 10;
+const DEFAULT_AUTO_COOLDOWN_COOLDOWN_MINUTES = 10;
+
+interface AutoCooldownConfig {
+    cooldownMinutes?: number | undefined;
+    requestCount?: number | undefined;
+    withinMinutes?: number | undefined;
+}
+
+type ResolvedAutoCooldownConfig = Required<{
+    [K in keyof AutoCooldownConfig]: NonNullable<AutoCooldownConfig[K]>;
+}>;
 
 interface DiscordIgnoreConfig {
+    autoCooldown?: boolean | AutoCooldownConfig | undefined;
     defaultCooldownMinutes?: number | undefined;
     ignoredAccountIds?: string[] | undefined;
     ignoredLeadingStrings?: string[] | undefined;
 }
 
 const cooldownUntilByChannelId = new Map<string, number>();
+const requestTimestampsByChannelId = new Map<string, number[]>();
 
 const getConfig = <K extends keyof DiscordIgnoreConfig>(
     config: Record<string, unknown> | undefined,
@@ -22,6 +37,62 @@ const cleanupExpiredCooldowns = (): void => {
             cooldownUntilByChannelId.delete(channelId);
         }
     }
+};
+
+const getPositiveNumberOrDefault = (value: number | undefined, defaultValue: number): number =>
+    // eslint-disable-next-line no-magic-numbers
+    typeof value === "number" && value > 0 ? value : defaultValue;
+
+const resolveAutoCooldownConfig = (
+    config: boolean | AutoCooldownConfig | undefined
+): ResolvedAutoCooldownConfig | null => {
+    if (!config) return null;
+
+    const configObject = typeof config === "object" ? config : {};
+
+    return {
+        cooldownMinutes: getPositiveNumberOrDefault(
+            configObject.cooldownMinutes,
+            DEFAULT_AUTO_COOLDOWN_COOLDOWN_MINUTES
+        ),
+        requestCount: getPositiveNumberOrDefault(configObject.requestCount, DEFAULT_AUTO_COOLDOWN_REQUEST_COUNT),
+        withinMinutes: getPositiveNumberOrDefault(configObject.withinMinutes, DEFAULT_AUTO_COOLDOWN_WITHIN_MINUTES)
+    };
+};
+
+const cleanupAutoCooldownRequestTimestamps = (channelId: string, config: ResolvedAutoCooldownConfig): number[] => {
+    const timestamps = requestTimestampsByChannelId.get(channelId);
+    if (!timestamps) return [];
+
+    const now = Date.now();
+
+    // eslint-disable-next-line no-magic-numbers
+    const withinMilliseconds = config.withinMinutes * 60 * 1000;
+    const recentTimestamps = timestamps.filter((timestamp) => now - timestamp < withinMilliseconds);
+
+    if (!recentTimestamps.length) {
+        requestTimestampsByChannelId.delete(channelId);
+        return [];
+    }
+
+    requestTimestampsByChannelId.set(channelId, recentTimestamps);
+    return recentTimestamps;
+};
+
+const trackAutoCooldownRequest = (channelId: string, config: ResolvedAutoCooldownConfig): void => {
+    const now = Date.now();
+    const recentTimestamps = cleanupAutoCooldownRequestTimestamps(channelId, config);
+
+    recentTimestamps.push(now);
+
+    if (recentTimestamps.length >= config.requestCount) {
+        // eslint-disable-next-line no-magic-numbers
+        cooldownUntilByChannelId.set(channelId, now + config.cooldownMinutes * 60 * 1000);
+        requestTimestampsByChannelId.delete(channelId);
+        return;
+    }
+
+    requestTimestampsByChannelId.set(channelId, recentTimestamps);
 };
 
 // The plugin SDK has `context.channelId`, but in the case of Discord, its value is always `"discord"`, so we infer the channel ID from the session key.
@@ -87,6 +158,7 @@ export default definePluginEntry({
     register(api) {
         const ignoredAccountIds = new Set(getConfig(api.pluginConfig, "ignoredAccountIds"));
         const ignoredLeadingStrings = getConfig(api.pluginConfig, "ignoredLeadingStrings") ?? [];
+        const autoCooldownConfig = resolveAutoCooldownConfig(getConfig(api.pluginConfig, "autoCooldown"));
         const defaultCooldownMinutes =
             getConfig(api.pluginConfig, "defaultCooldownMinutes") ?? DEFAULT_COOLDOWN_MINUTES;
 
@@ -115,6 +187,10 @@ export default definePluginEntry({
                 const channelId = sessionKey ? getChannelIdFromSessionKey(sessionKey) : null;
                 if (!channelId) return;
 
+                if (autoCooldownConfig) {
+                    cleanupAutoCooldownRequestTimestamps(channelId, autoCooldownConfig);
+                }
+
                 // Don't drop slash commands
                 const body = (event.body ?? event.content).trim();
                 if (body.startsWith("/") && !body.startsWith("/ ")) return;
@@ -127,6 +203,10 @@ export default definePluginEntry({
 
                 const until = cooldownUntilByChannelId.get(channelId);
                 if (until) return { handled: true };
+
+                if (autoCooldownConfig) {
+                    trackAutoCooldownRequest(channelId, autoCooldownConfig);
+                }
 
                 // eslint-disable-next-line no-useless-return
                 return;
