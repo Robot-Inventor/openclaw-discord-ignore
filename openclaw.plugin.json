@@ -9,6 +9,35 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
+            "autoCooldown": {
+                "default": false,
+                "oneOf": [
+                    {
+                        "type": "boolean"
+                    },
+                    {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "cooldownMinutes": {
+                                "type": "number",
+                                "default": 10,
+                                "exclusiveMinimum": 0
+                            },
+                            "requestCount": {
+                                "type": "number",
+                                "default": 10,
+                                "exclusiveMinimum": 0
+                            },
+                            "withinMinutes": {
+                                "type": "number",
+                                "default": 10,
+                                "exclusiveMinimum": 0
+                            }
+                        }
+                    }
+                ]
+            },
             "defaultCooldownMinutes": {
                 "type": "number",
                 "default": 30,
@@ -32,6 +61,10 @@
         }
     },
     "uiHints": {
+        "autoCooldown": {
+            "label": "Automatic cooldown",
+            "help": "Automatically enables cooldown when too many messages arrive within the configured time window. Use true for defaults, false to disable, or an object to customize it."
+        },
         "defaultCooldownMinutes": {
             "label": "Default cooldown minutes",
             "help": "Default cooldown duration used by /cooldown and /cooldown on."
