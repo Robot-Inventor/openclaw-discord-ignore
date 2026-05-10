@@ -48,7 +48,7 @@
     "jiti": "^2.7.0",
     "openclaw": "^2026.5.7",
     "prettier": "^3.8.3",
-    "typescript": "^6.0.0"
+    "typescript": "^6.0.3"
   },
   "overrides": {
     "zod-validation-error": "^5.0.0"
