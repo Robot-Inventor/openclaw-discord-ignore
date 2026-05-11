@@ -1,6 +1,6 @@
 {
   "name": "@robot-inventor/discord-ignore",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Rule-based Discord message filtering and /cooldown slash command support for OpenClaw.",
   "keywords": [
     "openclaw",
