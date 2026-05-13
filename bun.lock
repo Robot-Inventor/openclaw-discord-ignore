@@ -10,7 +10,7 @@
         "@robot-inventor/eslint-config": "^12.0.1",
         "@robot-inventor/tsconfig-base": "^7.1.0",
         "@types/bun": "^1.3.14",
-        "clawhub": "^0.13.0",
+        "clawhub": "^0.15.0",
         "eslint": "^10.3.0",
         "jiti": "^2.7.0",
         "openclaw": "^2026.5.7",
@@ -721,7 +721,7 @@
 
     "chownr": ["chownr@3.0.0", "", {}, "sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g=="],
 
-    "clawhub": ["clawhub@0.13.0", "", { "dependencies": { "@clack/prompts": "^1.3.0", "arktype": "^2.2.0", "commander": "^14.0.3", "fflate": "^0.8.2", "ignore": "^7.0.5", "json5": "^2.2.3", "mime": "^4.1.0", "ora": "^9.4.0", "p-retry": "8.0.0", "semver": "^7.8.0", "undici": "7.25.0" }, "bin": { "clawdhub": "bin/clawdhub.js", "clawhub": "bin/clawdhub.js" } }, "sha512-R/bu3zjTqV/qNXcx7/wAnN3eHUfEEJpHWhozCuVAn8VqSrTxvhOjXjOWgAEP9kvAIg0m+A1oplPeEXm3b8SuAA=="],
+    "clawhub": ["clawhub@0.15.0", "", { "dependencies": { "@clack/prompts": "^1.3.0", "arktype": "^2.2.0", "commander": "^14.0.3", "fflate": "^0.8.2", "ignore": "^7.0.5", "json5": "^2.2.3", "mime": "^4.1.0", "ora": "^9.4.0", "p-retry": "8.0.0", "semver": "^7.8.0", "undici": "7.25.0" }, "bin": { "clawdhub": "bin/clawdhub.js", "clawhub": "bin/clawdhub.js" } }, "sha512-I1KcpEzaMrUvcBFP+CkBybWOXeEF7sKo/GgEs68g/K4cdBfYTpVaRvS+EnBK4ZtGlU/H4q2sc3y31oj77F4AYg=="],
 
     "cli-cursor": ["cli-cursor@5.0.0", "", { "dependencies": { "restore-cursor": "^5.0.0" } }, "sha512-aCj4O5wKyszjMmDT4tZj93kxyydN/K5zPWSCe6/0AV/AA1pqe5ZBIw0a2ZfPQV7lL5/yb5HsUreJ6UFAF1tEQw=="],
 
