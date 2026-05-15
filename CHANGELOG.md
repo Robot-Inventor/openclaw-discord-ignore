@@ -1,5 +1,11 @@
 # @robot-inventor/discord-ignore
 
+## 1.0.4
+
+### Patch Changes
+
+- [#31](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/31) [`3d1862d`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/3d1862d39488eee653d9acc0015f47f81d0f2ae7) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency openclaw to ^2026.5.12
+
 ## 1.0.3
 
 ### Patch Changes
