@@ -1,5 +1,17 @@
 # @robot-inventor/discord-ignore
 
+## 1.1.0
+
+### Minor Changes
+
+- [#38](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/38) [`7e5b7a8`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/7e5b7a8d5ae2f9d90f101d21b9e27b4e723305ef) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add a feature to allow setting up accounts that can bypass the cooldown
+
+### Patch Changes
+
+- [#35](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/35) [`056d1cd`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/056d1cd4feaf4d7d9aa6e52579bc781c00ea3242) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency clawhub to ^0.16.0
+
+- [#36](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/36) [`9770f5c`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/9770f5c28e9ab868ef3711c810568166a32299cb) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency openclaw to ^2026.5.18
+
 ## 1.0.4
 
 ### Patch Changes
