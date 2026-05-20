@@ -17,6 +17,7 @@ type ResolvedAutoCooldownConfig = Required<{
 
 interface DiscordIgnoreConfig {
     autoCooldown?: boolean | AutoCooldownConfig | undefined;
+    cooldownBypassAccountIds?: string[] | undefined;
     defaultCooldownMinutes?: number | undefined;
     ignoredAccountIds?: string[] | undefined;
     ignoredLeadingStrings?: string[] | undefined;
@@ -156,6 +157,7 @@ export default definePluginEntry({
 
     // eslint-disable-next-line max-lines-per-function
     register(api) {
+        const cooldownBypassAccountIds = new Set(getConfig(api.pluginConfig, "cooldownBypassAccountIds"));
         const ignoredAccountIds = new Set(getConfig(api.pluginConfig, "ignoredAccountIds"));
         const ignoredLeadingStrings = getConfig(api.pluginConfig, "ignoredLeadingStrings") ?? [];
         const autoCooldownConfig = resolveAutoCooldownConfig(getConfig(api.pluginConfig, "autoCooldown"));
@@ -202,7 +204,8 @@ export default definePluginEntry({
                 }
 
                 const until = cooldownUntilByChannelId.get(channelId);
-                if (until) return { handled: true };
+                const shouldBypassCooldown = senderId ? cooldownBypassAccountIds.has(senderId) : false;
+                if (until && !shouldBypassCooldown) return { handled: true };
 
                 if (autoCooldownConfig) {
                     trackAutoCooldownRequest(channelId, autoCooldownConfig);

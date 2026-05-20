@@ -20,6 +20,7 @@ Configure the plugin through OpenClaw's plugin config for `discord-ignore`.
 ```json
 {
     "autoCooldown": false,
+    "cooldownBypassAccountIds": [],
     "defaultCooldownMinutes": 30,
     "ignoredAccountIds": [],
     "ignoredLeadingStrings": []
@@ -40,6 +41,15 @@ Default cooldown duration in minutes used by the `/cooldown` command. The defaul
 
 - Type: `number`
 - Default: `30`
+
+### `cooldownBypassAccountIds`
+
+An array of Discord account IDs whose messages should still be dispatched while the current channel is on cooldown.
+
+Messages from these accounts still count toward `autoCooldown` request tracking.
+
+- Type: `string[]`
+- Default: `[]`
 
 ### `ignoredAccountIds`
 

@@ -43,6 +43,13 @@
                 "default": 30,
                 "exclusiveMinimum": 0
             },
+            "cooldownBypassAccountIds": {
+                "type": "array",
+                "default": [],
+                "items": {
+                    "type": "string"
+                }
+            },
             "ignoredAccountIds": {
                 "type": "array",
                 "default": [],
@@ -68,6 +75,10 @@
         "defaultCooldownMinutes": {
             "label": "Default cooldown minutes",
             "help": "Default cooldown duration used by /cooldown and /cooldown on."
+        },
+        "cooldownBypassAccountIds": {
+            "label": "Cooldown bypass account IDs",
+            "help": "Discord account IDs whose inbound messages should still be dispatched while the channel is on cooldown. These messages still count toward automatic cooldown."
         },
         "ignoredAccountIds": {
             "label": "Ignored account IDs",
