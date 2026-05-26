@@ -1,5 +1,15 @@
 # @robot-inventor/discord-ignore
 
+## 1.1.1
+
+### Patch Changes
+
+- [#42](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/42) [`cab9e6f`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/cab9e6f8677c56e7824c8796dffcab0e0add5299) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency clawhub to ^0.18.0
+
+- [#41](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/41) [`86feeee`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/86feeeeec90b57e10a3d54843a0375ea4bf66832) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): lock file maintenance
+
+- [#40](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/40) [`e2b0e07`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/e2b0e07ca89e673e1297ac548dca6b64646da2b7) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency openclaw to ^2026.5.22
+
 ## 1.1.0
 
 ### Minor Changes
