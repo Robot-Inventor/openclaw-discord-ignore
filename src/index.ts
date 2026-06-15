@@ -1,4 +1,8 @@
-import { type PluginCommandContext, definePluginEntry } from "openclaw/plugin-sdk/plugin-entry";
+import {
+    type OpenClawPluginDefinition,
+    type PluginCommandContext,
+    definePluginEntry
+} from "openclaw/plugin-sdk/plugin-entry";
 
 const DEFAULT_COOLDOWN_MINUTES = 30;
 const DEFAULT_AUTO_COOLDOWN_REQUEST_COUNT = 10;
@@ -150,7 +154,7 @@ const handleCooldownCommand = (context: PluginCommandContext, defaultCooldownMin
     };
 };
 
-export default definePluginEntry({
+const plugin: OpenClawPluginDefinition = definePluginEntry({
     description: "Rule-based Discord message filtering and /cooldown slash command support for OpenClaw.",
     id: "discord-ignore",
     name: "Discord Ignore",
@@ -219,3 +223,5 @@ export default definePluginEntry({
         );
     }
 });
+
+export default plugin;
