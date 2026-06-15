@@ -1,5 +1,13 @@
 # @robot-inventor/discord-ignore
 
+## 1.1.4
+
+### Patch Changes
+
+- [#62](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/62) [`90dd0ce`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/90dd0cea5de9dfc672ab893318b061f3e13e1f9d) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: add a type annotation for the plugin definition
+
+- [#54](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/54) [`b96c590`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/b96c590edac405c78e5150dc1115e96cd2f3d979) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency clawhub to ^0.21.0
+
 ## 1.1.3
 
 ### Patch Changes
