@@ -13,7 +13,7 @@
         "clawhub": "^0.22.0",
         "eslint": "^10.5.0",
         "jiti": "^2.7.0",
-        "openclaw": "^2026.6.8",
+        "openclaw": "^2026.6.10",
         "prettier": "^3.8.4",
         "typescript": "^6.0.3",
       },
@@ -985,7 +985,7 @@
 
     "openai": ["openai@6.39.1", "", { "peerDependencies": { "ws": "^8.18.0", "zod": "^3.25 || ^4.0" }, "optionalPeers": ["ws", "zod"], "bin": { "openai": "bin/cli" } }, "sha512-z3dO9fEWOXBzlXynVb/xZ/tujzUjFWQWn3C0n0mw6Vo0zJTbEkaN4b2cLWjhJ6haJQx8LlREoafHRl+Gu/Hl+A=="],
 
-    "openclaw": ["openclaw@2026.6.8", "", { "dependencies": { "@agentclientprotocol/sdk": "0.22.1", "@anthropic-ai/sdk": "0.100.1", "@clack/core": "1.3.1", "@clack/prompts": "1.4.0", "@earendil-works/pi-tui": "0.78.0", "@google/genai": "2.7.0", "@grammyjs/runner": "2.0.3", "@grammyjs/transformer-throttler": "1.2.1", "@homebridge/ciao": "1.3.9", "@lydell/node-pty": "1.2.0-beta.12", "@mistralai/mistralai": "2.2.5", "@modelcontextprotocol/sdk": "1.29.0", "@mozilla/readability": "0.6.0", "@openclaw/fs-safe": "0.3.0", "@openclaw/proxyline": "0.3.3", "chalk": "5.6.2", "chokidar": "5.0.0", "clawpdf": "0.3.0", "commander": "14.0.3", "croner": "10.0.1", "cross-spawn": "7.0.6", "diff": "9.0.0", "dotenv": "17.4.2", "express": "5.2.1", "file-type": "22.0.1", "glob": "13.0.6", "grammy": "1.43.0", "highlight.js": "11.11.1", "hosted-git-info": "10.1.1", "ignore": "7.0.5", "jiti": "2.7.0", "json5": "2.2.3", "jszip": "3.10.1", "kysely": "0.29.2", "linkedom": "0.18.12", "minimatch": "10.2.5", "node-edge-tts": "1.2.10", "openai": "6.39.1", "partial-json": "0.1.7", "playwright-core": "1.60.0", "proper-lockfile": "4.1.2", "qrcode": "1.5.4", "quickjs-wasi": "3.0.0", "rastermill": "0.3.1", "tar": "7.5.15", "tree-sitter-bash": "0.25.1", "tslog": "4.10.2", "typebox": "1.1.39", "typescript": "6.0.3", "undici": "8.3.0", "web-push": "3.6.7", "web-tree-sitter": "0.26.9", "ws": "8.21.0", "yaml": "2.9.0", "zod": "4.4.3" }, "optionalDependencies": { "sqlite-vec": "0.1.9" }, "bin": { "openclaw": "openclaw.mjs" } }, "sha512-iziR8fi69+ojrtX7FYYvTpkGcVnmyLpIhvchgt5LFkkdHVWw973XAAekKVZ3/xQJ5FG4NwgHkXL0LLTrgsNOSQ=="],
+    "openclaw": ["openclaw@2026.6.10", "", { "dependencies": { "@agentclientprotocol/sdk": "0.22.1", "@anthropic-ai/sdk": "0.100.1", "@clack/core": "1.3.1", "@clack/prompts": "1.4.0", "@earendil-works/pi-tui": "0.78.0", "@google/genai": "2.7.0", "@grammyjs/runner": "2.0.3", "@grammyjs/transformer-throttler": "1.2.1", "@homebridge/ciao": "1.3.9", "@lydell/node-pty": "1.2.0-beta.12", "@mistralai/mistralai": "2.2.5", "@modelcontextprotocol/sdk": "1.29.0", "@mozilla/readability": "0.6.0", "@openclaw/fs-safe": "0.3.0", "@openclaw/proxyline": "0.3.3", "chalk": "5.6.2", "chokidar": "5.0.0", "clawpdf": "0.3.0", "commander": "14.0.3", "croner": "10.0.1", "diff": "9.0.0", "dotenv": "17.4.2", "express": "5.2.1", "file-type": "22.0.1", "glob": "13.0.6", "grammy": "1.43.0", "highlight.js": "11.11.1", "hosted-git-info": "10.1.1", "ignore": "7.0.5", "jiti": "2.7.0", "json5": "2.2.3", "jszip": "3.10.1", "kysely": "0.29.2", "linkedom": "0.18.12", "minimatch": "10.2.5", "node-edge-tts": "1.2.10", "openai": "6.39.1", "partial-json": "0.1.7", "playwright-core": "1.60.0", "proper-lockfile": "4.1.2", "qrcode": "1.5.4", "quickjs-wasi": "3.0.0", "rastermill": "0.3.1", "tar": "7.5.16", "tree-sitter-bash": "0.25.1", "tslog": "4.10.2", "typebox": "1.1.39", "typescript": "6.0.3", "undici": "8.5.0", "web-push": "3.6.7", "web-tree-sitter": "0.26.9", "ws": "8.21.0", "yaml": "2.9.0", "zod": "4.4.3" }, "optionalDependencies": { "sqlite-vec": "0.1.9" }, "bin": { "openclaw": "openclaw.mjs" } }, "sha512-LcooND2tBQw8A+kc1Ujltu3lg30bJ0w7XaeRy7eYzobb8BBdcW6DOGbwJL4vpj1vl9+gjRceOtlh5nh9OARcug=="],
 
     "optionator": ["optionator@0.9.4", "", { "dependencies": { "deep-is": "^0.1.3", "fast-levenshtein": "^2.0.6", "levn": "^0.4.1", "prelude-ls": "^1.2.1", "type-check": "^0.4.0", "word-wrap": "^1.2.5" } }, "sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g=="],
 
@@ -1211,7 +1211,7 @@
 
     "supports-preserve-symlinks-flag": ["supports-preserve-symlinks-flag@1.0.0", "", {}, "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w=="],
 
-    "tar": ["tar@7.5.15", "", { "dependencies": { "@isaacs/fs-minipass": "^4.0.0", "chownr": "^3.0.0", "minipass": "^7.1.2", "minizlib": "^3.1.0", "yallist": "^5.0.0" } }, "sha512-dzGK0boVlC4W5QFuQN1EFSl3bIDYsk7Tj40U6eIBnK2k/8ml7TZ5agbI5j5+qnoVcAA+rNtBml8SEiLxZpNqRQ=="],
+    "tar": ["tar@7.5.16", "", { "dependencies": { "@isaacs/fs-minipass": "^4.0.0", "chownr": "^3.0.0", "minipass": "^7.1.2", "minizlib": "^3.1.0", "yallist": "^5.0.0" } }, "sha512-56adEpPMouktRlBLXiaYFFzZ/3+JXa8P9n7WbR+ibIjtviN55mEaOkiysCnPnWm+7kkui1Dn8J9l+g6zV8731w=="],
 
     "term-size": ["term-size@2.2.1", "", {}, "sha512-wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg=="],
 
@@ -1401,7 +1401,7 @@
 
     "openclaw/dotenv": ["dotenv@17.4.2", "", {}, "sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw=="],
 
-    "openclaw/undici": ["undici@8.3.0", "", {}, "sha512-TkUDgb6tl7KOGZ+7e8E3d2FYgUQgF6z5YypqjWmixVQSQERFcVrVg0ySADm2LVLRh5ljAaHTCR5Fmz3Q34rB7Q=="],
+    "openclaw/undici": ["undici@8.5.0", "", {}, "sha512-xamtWoB1EshgjpmlXd7GGm2VfdDtw1+rD8uhry8pSNW3If6S8E0m2T2+orSKeZXEn/aPJMviCpDBA65WJt8zhg=="],
 
     "proper-lockfile/signal-exit": ["signal-exit@3.0.7", "", {}, "sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ=="],
 
