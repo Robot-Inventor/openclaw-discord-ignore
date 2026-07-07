@@ -14,7 +14,7 @@
         "eslint": "^10.6.0",
         "jiti": "^2.7.0",
         "openclaw": "^2026.6.10",
-        "prettier": "^3.9.1",
+        "prettier": "^3.9.4",
         "typescript": "^6.0.3",
       },
     },
