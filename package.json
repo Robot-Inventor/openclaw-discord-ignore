@@ -47,7 +47,7 @@
     "eslint": "^10.7.0",
     "jiti": "^2.7.0",
     "openclaw": "^2026.6.11",
-    "prettier": "^3.9.5",
+    "prettier": "^3.9.6",
     "typescript": "^6.0.3"
   },
   "overrides": {
