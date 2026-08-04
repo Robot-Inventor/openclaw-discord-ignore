@@ -46,7 +46,7 @@
     "clawhub": "^0.23.3",
     "eslint": "^10.8.0",
     "jiti": "^2.7.0",
-    "openclaw": "^2026.6.33",
+    "openclaw": "^2026.6.34",
     "prettier": "^3.9.6",
     "typescript": "^6.0.3"
   },
