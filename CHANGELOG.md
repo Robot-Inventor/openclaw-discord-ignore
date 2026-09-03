@@ -1,5 +1,13 @@
 # @robot-inventor/discord-ignore
 
+## 1.1.10
+
+### Patch Changes
+
+- [#119](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/119) [`2944179`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/294417998866196e601ea645d4f1c105a74e3ede) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - refactor: remove unnecessary type annotation
+
+- [#117](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/117) [`a81d74d`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/a81d74d511666b1279d1d761dcfe1906d7415260) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency openclaw to ^2026.8.2
+
 ## 1.1.9
 
 ### Patch Changes
