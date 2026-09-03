@@ -40,7 +40,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.0",
     "@changesets/cli": "^3.0.1",
-    "@robot-inventor/eslint-config": "^13.0.3",
+    "@robot-inventor/eslint-config": "^13.1.0",
     "@robot-inventor/tsconfig-base": "^7.1.0",
     "@types/bun": "^1.4.0",
     "clawhub": "^0.23.3",
