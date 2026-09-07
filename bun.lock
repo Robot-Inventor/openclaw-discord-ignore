@@ -8,7 +8,7 @@
         "@changesets/changelog-github": "^1.0.1",
         "@changesets/cli": "^3.0.2",
         "@robot-inventor/eslint-config": "^13.1.1",
-        "@robot-inventor/tsconfig-base": "^7.1.0",
+        "@robot-inventor/tsconfig-base": "^7.2.0",
         "@types/bun": "^1.4.1",
         "clawhub": "^0.23.3",
         "eslint": "^10.10.0",
@@ -359,7 +359,7 @@
 
     "@robot-inventor/eslint-config": ["@robot-inventor/eslint-config@13.1.1", "", { "dependencies": { "@eslint-react/eslint-plugin": "^5.18.7", "@eslint-react/kit": "^5.18.7", "@eslint/js": "^10.0.1", "@next/eslint-plugin-next": "^16.3.4", "@stylistic/eslint-plugin": "^5.10.0", "@typescript-eslint/types": "^8.69.0", "eslint": "^10.9.1", "eslint-config-prettier": "^10.1.8", "eslint-import-resolver-node": "^0.4.0", "eslint-import-resolver-typescript": "^4.4.5", "eslint-plugin-import-x": "^4.17.1", "eslint-plugin-jsdoc": "^64.3.4", "eslint-plugin-react-compiler": "^19.0.0-beta-ebf51a3-20250411", "eslint-plugin-react-doctor": "^0.9.13", "eslint-plugin-react-hooks": "^7.1.1", "typescript-eslint": "^8.69.0" } }, "sha512-Ye5AC4gQzT5PFYZR3z31+X0FlVAWC6k9+U5a8/ttt68C8eco62j/kctRSqHEONDGWwCC00RrZ6fcjBnyc2Ia7Q=="],
 
-    "@robot-inventor/tsconfig-base": ["@robot-inventor/tsconfig-base@7.1.0", "", {}, "sha512-cEsDyPJ2+FQN6OmNTVjktmJbsfjTwsja+ny44g/1I8iWSbpfy4h56Js7c90GFOODQZcO6r9vDQok0IX3oTMEgA=="],
+    "@robot-inventor/tsconfig-base": ["@robot-inventor/tsconfig-base@7.2.0", "", {}, "sha512-M3kXeBVcuS7QDrCva77iIlQ4MRG7Y2EnagnmJUj00cRuzlu0Qq++EZZpA7ySMJyyBZvLWfmwl2zVNh0/ANSabA=="],
 
     "@sec-ant/readable-stream": ["@sec-ant/readable-stream@0.4.1", "", {}, "sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg=="],
 
