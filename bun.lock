@@ -11,7 +11,7 @@
         "@robot-inventor/tsconfig-base": "^7.2.0",
         "@types/bun": "^1.4.2",
         "clawhub": "^0.23.3",
-        "openclaw": "^2026.9.4",
+        "openclaw": "^2026.9.5",
         "oxlint": "^1.83.0",
         "prettier": "^3.9.8",
         "typescript": "^7.0.2",
