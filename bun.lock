@@ -7,7 +7,7 @@
       "devDependencies": {
         "@changesets/changelog-github": "^1.0.1",
         "@changesets/cli": "^3.0.3",
-        "@robot-inventor/oxlint-config": "^0.2.0",
+        "@robot-inventor/oxlint-config": "^0.3.0",
         "@robot-inventor/tsconfig-base": "^7.2.0",
         "@types/bun": "^1.4.2",
         "clawhub": "^0.23.3",
@@ -333,7 +333,7 @@
 
     "@protobufjs/utf8": ["@protobufjs/utf8@1.1.2", "", {}, "sha512-b1UQwcEZ4yCnMCD8DAL1VlbvBJE9/IX4FTIp7BG1xYpf29SLazLSrqUkj4w7Y5y7cCVP6E5tcqqcI0xemPkHug=="],
 
-    "@robot-inventor/oxlint-config": ["@robot-inventor/oxlint-config@0.2.0", "", { "dependencies": { "@next/eslint-plugin-next": "^16.3.4", "eslint": "^10.10.0", "eslint-import-resolver-node": "^0.4.0", "eslint-import-resolver-typescript": "^4.4.5", "eslint-plugin-import-x": "^4.17.1", "eslint-plugin-jsdoc": "^64.3.9", "oxlint": "^1.82.0", "oxlint-plugin-react-doctor": "^0.9.13", "oxlint-tsgolint": "^7.0.2001" } }, "sha512-YZ8xyumd9igijLxdV07J2F/ooY+s5vRNfSfG/IodENKqWDA7NlUXMKaKLZ3xxTE1jEUBaAp4z4wvmvnF/vTiSA=="],
+    "@robot-inventor/oxlint-config": ["@robot-inventor/oxlint-config@0.3.0", "", { "dependencies": { "@next/eslint-plugin-next": "^16.3.5", "eslint": "^10.10.0", "eslint-import-resolver-node": "^0.4.0", "eslint-import-resolver-typescript": "^4.4.5", "eslint-plugin-import-x": "^4.17.1", "eslint-plugin-jsdoc": "^64.5.2", "oxlint": "^1.83.0", "oxlint-plugin-react-doctor": "^0.9.14", "oxlint-tsgolint": "^7.0.2001" } }, "sha512-sLHzPHaw0REYRO16j6J8yZ3/fFhYtTqBxy1/rrzc9GV26EUcbfdZYOR1PJj/SDKyiiGn0OHCI9g/MBDR6xEdbw=="],
 
     "@robot-inventor/tsconfig-base": ["@robot-inventor/tsconfig-base@7.2.0", "", {}, "sha512-M3kXeBVcuS7QDrCva77iIlQ4MRG7Y2EnagnmJUj00cRuzlu0Qq++EZZpA7ySMJyyBZvLWfmwl2zVNh0/ANSabA=="],
 
