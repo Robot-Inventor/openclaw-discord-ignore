@@ -41,7 +41,7 @@ const cleanupExpiredCooldowns = (): void => {
 };
 
 const getPositiveNumberOrDefault = (value: number | undefined, defaultValue: number): number =>
-    // eslint-disable-next-line no-magic-numbers
+    // oxlint-disable-next-line no-magic-numbers
     typeof value === "number" && value > 0 ? value : defaultValue;
 
 const resolveAutoCooldownConfig = (
@@ -67,7 +67,7 @@ const cleanupAutoCooldownRequestTimestamps = (channelId: string, config: Resolve
 
     const now = Date.now();
 
-    // eslint-disable-next-line no-magic-numbers
+    // oxlint-disable-next-line no-magic-numbers
     const withinMilliseconds = config.withinMinutes * 60 * 1000;
     const recentTimestamps = timestamps.filter((timestamp) => now - timestamp < withinMilliseconds);
 
@@ -87,7 +87,7 @@ const trackAutoCooldownRequest = (channelId: string, config: ResolvedAutoCooldow
     recentTimestamps.push(now);
 
     if (recentTimestamps.length >= config.requestCount) {
-        // eslint-disable-next-line no-magic-numbers
+        // oxlint-disable-next-line no-magic-numbers
         cooldownUntilByChannelId.set(channelId, now + config.cooldownMinutes * 60 * 1000);
         requestTimestampsByChannelId.delete(channelId);
         return;
@@ -97,10 +97,9 @@ const trackAutoCooldownRequest = (channelId: string, config: ResolvedAutoCooldow
 };
 
 // The plugin SDK has `context.channelId`, but in the case of Discord, its value is always `"discord"`, so we infer the channel ID from the session key.
-// eslint-disable-next-line no-magic-numbers
+// oxlint-disable-next-line no-magic-numbers
 const getChannelIdFromSessionKey = (sessionKey: string): string | null => sessionKey.split(":").at(-1) ?? null;
 
-// eslint-disable-next-line max-statements
 const handleCooldownCommand = (context: PluginCommandContext, defaultCooldownMinutes: number): { text: string } => {
     cleanupExpiredCooldowns();
 
@@ -124,7 +123,7 @@ const handleCooldownCommand = (context: PluginCommandContext, defaultCooldownMin
 
     if (arg === "on" || !arg) {
         const minutes = defaultCooldownMinutes;
-        // eslint-disable-next-line no-magic-numbers
+        // oxlint-disable-next-line no-magic-numbers
         const until = Date.now() + minutes * 60 * 1000;
         cooldownUntilByChannelId.set(channelId, until);
 
@@ -134,9 +133,9 @@ const handleCooldownCommand = (context: PluginCommandContext, defaultCooldownMin
     }
 
     const durationArg = Number(arg);
-    // eslint-disable-next-line no-magic-numbers
+    // oxlint-disable-next-line no-magic-numbers
     if (!isNaN(durationArg) && durationArg > 0) {
-        // eslint-disable-next-line no-magic-numbers
+        // oxlint-disable-next-line no-magic-numbers
         const until = Date.now() + durationArg * 60 * 1000;
         cooldownUntilByChannelId.set(channelId, until);
 
@@ -155,7 +154,6 @@ const plugin = definePluginEntry({
     id: "discord-ignore",
     name: "Discord Ignore",
 
-    // eslint-disable-next-line max-lines-per-function
     register(api) {
         const cooldownBypassAccountIds = new Set(getConfig(api.pluginConfig, "cooldownBypassAccountIds"));
         const ignoredAccountIds = new Set(getConfig(api.pluginConfig, "ignoredAccountIds"));
@@ -175,8 +173,7 @@ const plugin = definePluginEntry({
 
         api.on(
             "before_dispatch",
-            /* eslint-disable consistent-return */
-            // eslint-disable-next-line max-statements
+            /* oxlint-disable consistent-return */
             (event, context) => {
                 if (event.channel !== "discord") return;
 
@@ -211,10 +208,10 @@ const plugin = definePluginEntry({
                     trackAutoCooldownRequest(channelId, autoCooldownConfig);
                 }
 
-                // eslint-disable-next-line no-useless-return
+                // oxlint-disable-next-line no-useless-return
                 return;
             },
-            /* eslint-enable consistent-return */
+            /* oxlint-enable consistent-return */
             { priority: 100 }
         );
     }
