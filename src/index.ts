@@ -173,7 +173,6 @@ const plugin = definePluginEntry({
 
         api.on(
             "before_dispatch",
-            /* oxlint-disable consistent-return */
             (event, context) => {
                 if (event.channel !== "discord") return;
 
@@ -211,7 +210,6 @@ const plugin = definePluginEntry({
                 // oxlint-disable-next-line no-useless-return
                 return;
             },
-            /* oxlint-enable consistent-return */
             { priority: 100 }
         );
     }
