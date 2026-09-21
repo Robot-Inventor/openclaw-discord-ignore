@@ -1,5 +1,11 @@
 # @robot-inventor/discord-ignore
 
+## 1.1.12
+
+### Patch Changes
+
+- [#146](https://github.com/Robot-Inventor/openclaw-discord-ignore/pull/146) [`10a3d96`](https://github.com/Robot-Inventor/openclaw-discord-ignore/commit/10a3d9678a4d6ec5d8221a3e4fcf61991d5aec3b) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: remove unused oxlint-disable comments
+
 ## 1.1.11
 
 ### Patch Changes
