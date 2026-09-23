@@ -46,7 +46,7 @@
     "clawhub": "^0.23.3",
     "openclaw": "^2026.9.5",
     "oxlint": "^1.84.0",
-    "prettier": "^3.9.8",
+    "prettier": "^3.9.9",
     "typescript": "^7.0.2"
   },
   "openclaw": {
