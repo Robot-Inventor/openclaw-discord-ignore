@@ -196,7 +196,9 @@ const plugin = definePluginEntry({
                 // Strip Discord mentions (<@USER_ID>) before checking
                 const withoutMentions = body.replace(/<@!?\d+>\s*/gu, "").trim();
                 if (ignoredLeadingStrings.some((prefix) => withoutMentions.startsWith(prefix))) {
-                    return { handled: true };
+                    return {
+                        handled: true
+                    };
                 }
 
                 const until = cooldownUntilByChannelId.get(channelId);
