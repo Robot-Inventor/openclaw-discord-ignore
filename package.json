@@ -43,7 +43,7 @@
     "@robot-inventor/oxlint-config": "^1.0.0",
     "@robot-inventor/tsconfig-base": "^7.2.0",
     "@types/bun": "^1.4.4",
-    "clawhub": "^0.23.3",
+    "clawhub": "^0.24.1",
     "openclaw": "^2026.10.8",
     "oxfmt": "^0.75.0",
     "oxlint": "^1.90.0",
