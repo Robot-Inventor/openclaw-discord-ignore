@@ -73,10 +73,12 @@ const cleanupAutoCooldownRequestTimestamps = (channelId: string, config: Resolve
 
     if (!recentTimestamps.length) {
         requestTimestampsByChannelId.delete(channelId);
+
         return [];
     }
 
     requestTimestampsByChannelId.set(channelId, recentTimestamps);
+
     return recentTimestamps;
 };
 
@@ -90,6 +92,7 @@ const trackAutoCooldownRequest = (channelId: string, config: ResolvedAutoCooldow
         // oxlint-disable-next-line no-magic-numbers
         cooldownUntilByChannelId.set(channelId, now + config.cooldownMinutes * 60 * 1000);
         requestTimestampsByChannelId.delete(channelId);
+
         return;
     }
 
