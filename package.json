@@ -45,7 +45,7 @@
     "@types/bun": "^1.4.4",
     "clawhub": "^0.25.1",
     "openclaw": "^2026.11.1",
-    "oxfmt": "^0.76.0",
+    "oxfmt": "^0.77.0",
     "oxlint": "^1.91.0",
     "typescript": "^7.0.2"
   },
