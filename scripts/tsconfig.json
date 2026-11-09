@@ -1,0 +1,8 @@
+{
+    "extends": "@robot-inventor/tsconfig-base/tsc.json",
+    "compilerOptions": {
+        "rootDir": ".",
+        "types": ["node"]
+    },
+    "include": ["*.ts"]
+}

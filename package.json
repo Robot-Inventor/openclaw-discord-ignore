@@ -33,9 +33,9 @@
     "build": "tsc",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "lint": "oxlint src",
+    "lint": "oxlint src scripts",
     "ci:version": "changeset version",
-    "ci:publish": "npm run build && changeset publish && clawhub package publish ."
+    "ci:publish": "npm run build && changeset publish && bun scripts/publish-clawhub.ts"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.1",
